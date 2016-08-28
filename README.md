@@ -23,7 +23,8 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
 		- Implementação dos tratamentos da imagem.
 		- Implementação do zoom.
 		- Nova implentacao com interface intuitiva.
-	
+
+------------------------------------------------------------------------	
 #Utilização
 	- Instale (se não estiver instalado) a biblioteca "ImageTk"com o comando: "sudo apt-get install python-imaging-tk";
 	- Altere o diretorio no terminal linux com o comando 'cd' até a pastaonde se encontra o arquivo atividadeBiblioteca.py;
@@ -31,7 +32,7 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
 	- Selecione a Imagem desejada, clicando no botao "Abrir uma Imagem"; (a imagem selecionada ser do tipo '*.jpg')
 	- Utilize os comandos relacionados abaixo para navegação.
 ------------------------------------------------------------------------		
-		ESTRUTURA DE DIRETORIOS
+ESTRUTURA DE DIRETORIOS
 ------------------------------------------------------------------------
 	.
 	|-- atividadeBiblioteca
@@ -40,9 +41,7 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
 	|	|-- teste.jpeg (imagem utilizada para testes)
 
 ------------------------------------------------------------------------
-------------------------------------------------------------------------
-				Comandos
-------------------------------------------------------------------------
+#Comandos
 	Comando			Descrição
 	Botão "Abrir	Abre um seletor de aruivos para seleção da imagem;
 	uma imagem 
