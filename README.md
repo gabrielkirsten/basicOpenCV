@@ -1,8 +1,9 @@
 # Basic OpenCV
 A small software that opens an image, convert to grayscale and negative. The software uses openCV and tkinter.
+
+	Ps. Description in PT-BR
 ------------------------------------------------------------------------
-			        Descrição
-------------------------------------------------------------------------
+#Descrição
 Desenvolvido em Python v2.7.12 utilizando como base a biblioteca OpenCV v3.0.0 
 Sistema Operacional: Ubuntu 16.04 LTS 
 
@@ -13,34 +14,32 @@ outra sem interface que realizava as operações por comandos enviadospelo tecla
 
 Foram utilizados como material de apoio o site de documentação do OpenCVque foi sugerido pelo professor (http://docs.opencv.org/ e https://opencv-python-tutroals.readthedocs.io/) além de foruns diversos disponibilizados pela internet para tirar duvidas especificas de programação em Python
 
-**Etapas de desenvolvimento:
+	**Etapas de desenvolvimento:
 
-	- Estudo da estrutura básica do Python.
-	- Implementação da abertura da imagem.
-		(utilizando um arquivo fixo)
-	- Implementação da seleção do arquivo.
-	- Implementação dos tratamentos da imagem.
-	- Implementação do zoom.
-	- Nova implentacao com interface intuitiva.
+		- Estudo da estrutura básica do Python.
+		- Implementação da abertura da imagem.
+			(utilizando um arquivo fixo)
+		- Implementação da seleção do arquivo.
+		- Implementação dos tratamentos da imagem.
+		- Implementação do zoom.
+		- Nova implentacao com interface intuitiva.
 	
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-			       Utilização
-------------------------------------------------------------------------
+#Utilização
 	- Instale (se não estiver instalado) a biblioteca "ImageTk"com o comando: "sudo apt-get install python-imaging-tk";
 	- Altere o diretorio no terminal linux com o comando 'cd' até a pastaonde se encontra o arquivo atividadeBiblioteca.py;
  	- Execute o código atividadeBiblioteca_semInterface.py com o comando "python atividadeBiblioteca.py";
 	- Selecione a Imagem desejada, clicando no botao "Abrir uma Imagem"; (a imagem selecionada ser do tipo '*.jpg')
 	- Utilize os comandos relacionados abaixo para navegação.
-		
-ESTRUTURA DE DIRETORIOS
-.
-|-- atividadeBiblioteca
-|	|-- atividadeBiblioteca.py (codigo em python)
-|	|-- README.txt (arquivo contendo informações do software)
-|	|-- teste.jpeg (imagem utilizada para testes)
+------------------------------------------------------------------------		
+		ESTRUTURA DE DIRETORIOS
+------------------------------------------------------------------------
+	.
+	|-- atividadeBiblioteca
+	|	|-- atividadeBiblioteca.py (codigo em python)
+	|	|-- README.txt (arquivo contendo informações do software)
+	|	|-- teste.jpeg (imagem utilizada para testes)
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------
 ------------------------------------------------------------------------
 				Comandos
 ------------------------------------------------------------------------
