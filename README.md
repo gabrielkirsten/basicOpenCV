@@ -32,8 +32,7 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
 	- Selecione a Imagem desejada, clicando no botao "Abrir uma Imagem"; (a imagem selecionada ser do tipo '*.jpg')
 	- Utilize os comandos relacionados abaixo para navegação.
 ------------------------------------------------------------------------		
-ESTRUTURA DE DIRETORIOS
-------------------------------------------------------------------------
+#ESTRUTURA DE DIRETORIOS
 	.
 	|-- atividadeBiblioteca
 	|	|-- atividadeBiblioteca.py (codigo em python)
@@ -43,8 +42,8 @@ ESTRUTURA DE DIRETORIOS
 ------------------------------------------------------------------------
 #Comandos
 	Comando			Descrição
-	Botão "Abrir	Abre um seletor de aruivos para seleção da imagem;
-	uma imagem 
+	Botão "Abrir		Abre um seletor de aruivos para seleção da imagem;
+	uma imagem" 
 	
 	Botao +			Realiza a operação de zoom in;
 	
