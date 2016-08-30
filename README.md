@@ -9,8 +9,7 @@ Sistema Operacional: Ubuntu 16.04 LTS
 
 Software desenvolvido para disciplina de Visão Computacional, foram dedicadas em um intervalo de uma semana, cerca de 10 horas de desenvolvimento.
 
-A implementação, na parte dos itens referentes ao tratamento da imagem foi realizada facilmente, porém quando foi implementada a parte do zoom foram encontradas dificuldades, principalemente na decisão de como realizar esta tarefa de maneira mais intuitiva para o usuário. Foram implementadas tres versões do trabalho, duas com interface e botões e 
-outra sem interface que realizava as operações por comandos enviadospelo teclado, no final, foi decidido manter a ultima versao pois apresenta uma interface melhor elaborada para o usuario.
+A implementação, na parte dos itens referentes ao tratamento da imagem foi realizada facilmente, porém quando foi implementada a parte do zoom foram encontradas dificuldades, principalemente na decisão de como realizar esta tarefa de maneira mais intuitiva para o usuário. Foram implementadas tres versões do trabalho, duas com interface e botões e outra sem interface que realizava as operações por comandos enviadospelo teclado, no final, foi decidido manter a ultima versao pois apresenta uma interface melhor elaborada para o usuario.
 
 Foram utilizados como material de apoio o site de documentação do OpenCVque foi sugerido pelo professor (http://docs.opencv.org/ e https://opencv-python-tutroals.readthedocs.io/) além de foruns diversos disponibilizados pela internet para tirar duvidas especificas de programação em Python
 
