@@ -30,8 +30,9 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
  	- Execute o código atividadeBiblioteca_semInterface.py com o comando "python atividadeBiblioteca.py";
 	- Selecione a Imagem desejada, clicando no botao "Abrir uma Imagem"; (a imagem selecionada ser do tipo '*.jpg')
 	- Utilize os comandos relacionados abaixo para navegação.
+	
 ------------------------------------------------------------------------		
-#ESTRUTURA DE DIRETORIOS
+#Estrutura de diretórios
 	.
 	|-- atividadeBiblioteca
 	|	|-- atividadeBiblioteca.py (codigo em python)
