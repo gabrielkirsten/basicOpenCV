@@ -13,6 +13,9 @@ A implementação, na parte dos itens referentes ao tratamento da imagem foi rea
 
 Foram utilizados como material de apoio o site de documentação do OpenCVque foi sugerido pelo professor (http://docs.opencv.org/ e https://opencv-python-tutroals.readthedocs.io/) além de foruns diversos disponibilizados pela internet para tirar duvidas especificas de programação em Python
 
+###### -> Imagem do software
+![alt tag](https://cloud.githubusercontent.com/assets/15522193/18115621/c9e96b1c-6f0e-11e6-8186-2a416f0d897d.png)
+
 	**Etapas de desenvolvimento:
 
 		- Estudo da estrutura básica do Python.
@@ -30,7 +33,10 @@ Foram utilizados como material de apoio o site de documentação do OpenCVque fo
  	- Execute o código atividadeBiblioteca_semInterface.py com o comando "python atividadeBiblioteca.py";
 	- Selecione a Imagem desejada, clicando no botao "Abrir uma Imagem"; (a imagem selecionada ser do tipo '*.jpg')
 	- Utilize os comandos relacionados abaixo para navegação.
-	
+
+###### -> Seleção de arquivos	
+![alt tag](https://cloud.githubusercontent.com/assets/15522193/18115620/c9cc4df2-6f0e-11e6-9d14-535be9ffc367.png)
+
 ------------------------------------------------------------------------		
 #Estrutura de diretórios
 	.
