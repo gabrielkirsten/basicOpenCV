@@ -14,7 +14,8 @@ A implementação, na parte dos itens referentes ao tratamento da imagem foi rea
 Foram utilizados como material de apoio o site de documentação do OpenCVque foi sugerido pelo professor (http://docs.opencv.org/ e https://opencv-python-tutroals.readthedocs.io/) além de foruns diversos disponibilizados pela internet para tirar duvidas especificas de programação em Python
 
 ###### -> Imagem do software
-![alt tag](https://cloud.githubusercontent.com/assets/15522193/18115621/c9e96b1c-6f0e-11e6-8186-2a416f0d897d.png)
+![alt tag](https://cloud.githubusercontent.com/assets/15522193/19534336/c004eedc-9619-11e6-8e72-ee32683eee8f.png)
+![alt tag](https://cloud.githubusercontent.com/assets/15522193/19534335/bffe68c8-9619-11e6-804e-352866af08d5.png)
 
 	**Etapas de desenvolvimento:
 
