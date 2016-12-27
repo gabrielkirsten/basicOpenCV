@@ -18,8 +18,8 @@
 ##############################################################################################
 
 import cv2 									#importacao da biblioteca do OpenCV
-from Tkinter import * 						#biblioteca para selecao do arquivo 
-from tkFileDialog import * 					#biblioteca para selecao do arquivo 
+from Tkinter import * 						#biblioteca para selecao do arquivo
+from tkFileDialog import * 					#biblioteca para selecao do arquivo
 import numpy as np
 from PIL import Image
 from PIL import ImageTk
@@ -27,19 +27,19 @@ from PIL import ImageTk
 # Classe para interface principal, que contem somente um botao para abrir um arquivo
 # Metodos:
 #	- abrir_imagem : abre um seletor de arquivos para selecionar uma imagem a ser aberta
-class Gui:		
+class Gui:
 	#construtor da classe, inicia as principais interfaces
 	def __init__(self, master=None):
 		self.mainContainer = Frame(master, relief=RAISED, borderwidth=1, padx="10", pady="10")	#container principal
 		self.mainContainer.pack(expand="no", fill="both")										#exibir container
 		btn = Button(self.mainContainer , text="Abrir uma imagem", command=self.abrir_imagem)	#botao seletor de arquivos
 		btn.pack(side="bottom", fill="both", expand="yes", padx="10", pady="10")				#exibir botao seletor de aquivos
-	
+
 	#metodo de selecao de aquivos
 	def abrir_imagem(self):
 		Tk().withdraw()													#abre o seletor de arquivos
 		filename = askopenfilename(filetypes=[("Image Files", '*.jpg')])#somente arquivos .jpg poderao ser selecionadios
-		img = cv2.imread(filename.encode('utf-8'), cv2.IMREAD_COLOR) 	#abrir imagem selecionada colorida		
+		img = cv2.imread(filename.encode('utf-8'), cv2.IMREAD_COLOR) 	#abrir imagem selecionada colorida
 		img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 		ImageWindowNoPatch(root, img, self, 'original') 				#exibe a imagem sem tratamento
 		img_greyScale = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)			#alterar imagem para tons de cinza
@@ -59,24 +59,24 @@ class ImageWindowNoPatch:
 		self.imagem.title("Imagem - "+nome)													#define o titulo da janela
 		self.imgArray = Image.fromarray(img)												#conversao para imagem do tipo Image
 		self.imgOrig = ImageTk.PhotoImage(self.imgArray)									#conversao para imagem do tipo PhotoImage
-		self.frameImg = Frame(self.imagem)													#cria um novo Frame para exibir a imagem 
+		self.frameImg = Frame(self.imagem)													#cria um novo Frame para exibir a imagem
 		self.frameImg.pack(side="top",  fill="both", expand = "yes")						#exibe o frameImg
 		prop = 1																			#variavel para saber a proporcao da imagem em relacao a resolucao da tela
 		if root.winfo_screenwidth() < self.imgOrig.width():									#se a resulucao da imagem for maior que a da tela, calcula essa proporcao somada de dois
 			prop = (self.imgOrig.width())/root.winfo_screenwidth() + 2						#tanto na largura quanto na aultura
-		if root.winfo_screenheight() < self.imgOrig.height():	
+		if root.winfo_screenheight() < self.imgOrig.height():
 			propAux = (self.imgOrig.height())/root.winfo_screenheight() + 2
 			if propAux > prop:
-				prop = propAux		
+				prop = propAux
 		#cria um novo canvas para exibir a barra de rolagem, com a proporcao corrida pelo fator acima
 		self.canvas = Canvas(self.frameImg, borderwidth=0, scrollregion=(0,0,self.imgOrig.width(),self.imgOrig.height()),  width=self.imgOrig.width()/(prop), height=self.imgOrig.height()/(prop))
-		self.frame = Frame(self.canvas)														#cria um novo frame para conter uma barra de rolagem  				
-		self.mainImg = Label(self.frame, image=self.imgOrig)								#cria uma label para conter a imagem 
+		self.frame = Frame(self.canvas)														#cria um novo frame para conter uma barra de rolagem
+		self.mainImg = Label(self.frame, image=self.imgOrig)								#cria uma label para conter a imagem
 		self.mainImg.image = self.imgOrig													#define a imagem a ser exibida
 		self.mainImg.pack(side="top", fill="both", expand = "yes")							#exibe a imagem
 		self.vsb = Scrollbar(self.frameImg, orient="vertical", command=self.canvas.yview)	#barra de rolagem vertical
 		self.hsb = Scrollbar(self.frameImg, orient="horizontal", command=self.canvas.xview)	#barra de rolagem horizontal
-		self.canvas.configure(yscrollcommand=self.vsb.set, xscrollcommand=self.hsb.set)		#define a fucao da barra de rolagem 
+		self.canvas.configure(yscrollcommand=self.vsb.set, xscrollcommand=self.hsb.set)		#define a fucao da barra de rolagem
 		self.vsb.pack(side="right", fill="y")												#exibe a barra de rolagem vertical
 		self.hsb.pack(side="bottom", fill="x")												#exibe a barra de rolagem horizontal
 		self.canvas.pack(side="left", fill="both", expand="yes")							#exibe o canvas contendo a imagem e as barras
@@ -88,8 +88,8 @@ class ImageWindowNoPatch:
 		self.zoomoutbtn = Button(self.containerBtn, text=" - ", command=self.zoomOut)		#cria o botao de zoom out
 		self.zoominbtn.pack(side="left", fill="both", expand="yes", padx="10", pady="10")	#exibe o botao de zoom in
 		self.zoomoutbtn.pack(side="right", fill="both", expand="yes", padx="10", pady="10")	#exibe o botao de zoom out
-	
-	#funcao que realiza o zoom in na imagem 
+
+	#funcao que realiza o zoom in na imagem
 	def zoomIn(self):
 		#a condicao abaixo e para realizar um zoom gradual, dependendo do nivel de zoom atual
 		if self.scaleZoom > 1.5:
@@ -98,15 +98,16 @@ class ImageWindowNoPatch:
 			self.scaleZoom += 0.08
 		else:
 			self.scaleZoom += 0.1
+
+		self.imgArrayAux = self.imgArray.resize((int(self.imgOrig.width()*self.scaleZoom), int(self.imgOrig.height()*self.scaleZoom)), Image.ANTIALIAS) #redimensiona a imagem
 		
-		self.imgArrayAux = self.imgArray.resize((int(self.imgOrig.width()*self.scaleZoom), int(self.imgOrig.height()*self.scaleZoom)), Image.ANTIALIAS) #redimensiona a imagem 
 		#o codigo abaixo e responsavel por exibir a nova imagem redimensionada
 		self.img = ImageTk.PhotoImage(self.imgArrayAux)
 		self.mainImg.configure(image=self.img)
 		self.frame.configure(width=int(self.imgOrig.width()*self.scaleZoom),height=int(self.imgOrig.height()*self.scaleZoom))
 		self.canvas.configure(scrollregion=(0,0,int(self.imgOrig.width()*self.scaleZoom), int(self.imgOrig.height()*self.scaleZoom)))
-	
-	#funcao que realiza o zoom out na imagem 	
+
+	#funcao que realiza o zoom out na imagem
 	def zoomOut(self):
 		#a condicao abaixo e para realizar um zoom gradual, dependendo do nivel de zoom atual
 		if self.scaleZoom < 0.3:
@@ -115,8 +116,9 @@ class ImageWindowNoPatch:
 			self.scaleZoom -= 0.05
 		else:
 			self.scaleZoom -= 0.1
-			
-		self.imgArrayAux = self.imgArray.resize((int(self.imgOrig.width()*self.scaleZoom), int(self.imgOrig.height()*self.scaleZoom)), Image.ANTIALIAS) #redimensiona a imagem 
+
+		self.imgArrayAux = self.imgArray.resize((int(self.imgOrig.width()*self.scaleZoom), int(self.imgOrig.height()*self.scaleZoom)), Image.ANTIALIAS) #redimensiona a imagem
+
 		#o codigo abaixo e responsavel por exibir a nova imagem redimensionada
 		self.img = ImageTk.PhotoImage(self.imgArrayAux)
 		self.mainImg.configure(image=self.img)
@@ -130,4 +132,3 @@ Label(root, text="Selecione um arquivo de imagem '*.jpg' para continuar").pack(e
 Gui(root)																														#cria um novo objeto da classe Gui
 root.mainloop()																													#inicia o loop da interface
 print 'Finalzando...'
-	
